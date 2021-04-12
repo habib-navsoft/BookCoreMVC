@@ -22,6 +22,7 @@ namespace BookShop.API
         }
 
         [HttpGet("Categories")]
+        [SwaggerResponse(200)]
         public async Task<IActionResult> Categories(string title)
         {
             try
@@ -35,7 +36,6 @@ namespace BookShop.API
 
         [HttpGet("Authors")]
         [SwaggerResponse(200)]
-        //[Authorize]
         public async Task<IActionResult> Authors()
         {
             try
@@ -48,9 +48,8 @@ namespace BookShop.API
                 return Ok(ex.Message);
             }
         }
-        //https://www.yogihosting.com/aspnet-core-consume-api/#create
-        //https://www.tutorialsteacher.com/webapi/consume-web-api-get-method-in-aspnet-mvc
         [HttpGet("Books")]
+        [SwaggerResponse(200)]
         public async Task<IActionResult> Book()
         {
             try

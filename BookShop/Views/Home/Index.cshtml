@@ -4,7 +4,7 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+    <h1 class="display-4">Book List</h1>
     <table class="table">
         <thead>
             <tr>
@@ -23,7 +23,7 @@
                 <th>
                     @Html.DisplayNameFor(model => model.CId)
                 </th>
-                <th></th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -46,9 +46,7 @@
                     @Html.DisplayFor(modelItem => item.CId)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.BId">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.BId">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.BId">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.BId">Edit</a>
                 </td>
             </tr>
 
